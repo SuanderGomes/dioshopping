@@ -60,6 +60,7 @@ const Contatos = () => {
 
             {validator && 
                 <div className='alert alert-warning alert-desmissible fade show mt-2' role='alert'>
+
                     <strong>Por favor preencha todos os campos!</strong>
                     <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -78,12 +79,12 @@ const Contatos = () => {
             {message.map((content) => {
                 return(
                     <div className="card mt-2" key={content.id}>
-                        <div className="card-body">
-                            <h5 className="card-title">{content.email}</h5>
-                            <p className="card-text">{content.message}</p>
-                            <p className="card-text"><small className="text-muted">{content.created_at}</small></p>
-                        </div>
+                    <div className="card-body">
+                        <h5 className="card-title">{content.email}</h5>
+                        <p className="card-text">{content.message}</p>
+                        <p className="card-text"><small className="text-muted">{content.created_at}</small></p>
                     </div>
+                </div>
                 )
             } )}
         </>
